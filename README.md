@@ -83,11 +83,11 @@ If you're new to open source, here are some resources to help you get started:
 <div align="center">
   <table>
     <tr>
-      <td align="center"><a href="https://github.com/adithya-s-k"><img src="https://avatars.githubusercontent.com/u/27956426?s=400&u=582ecb2d706a63fc67eb1b54579c7ab19cf391fd&v=4" width="100px;" alt=""/><br /><sub><b>Adithya S Kolavi</b></sub></a><br /><a href="https://github.com/CognitiveLab-tech/World-of-AI/commits?author=adithya-s-k" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/adithya-s-k"><img src="https://avatars.githubusercontent.com/u/27956426?s=400&u=582ecb2d706a63fc67eb1b54579c7ab19cf391fd&v=4" width="100px;" alt=""/><br /><sub><b>Adithya S Kolavi</b></sub></a><br /><a href="https://github.com/dscpesu/my-first-opensource-contribution/commits?author=adithya-s-k" title="Code">💻</a></td>
+            <td align="center"><a href="https://github.com/ShubhKanodia"><img src="https://avatars.githubusercontent.com/u/110471762?v=4" width="100px;" alt=""/><br /><sub><b>Shubh Kanodia</b></sub></a><br /><a  title="Code">📱</a></td>
     </tr>
   </table>
 </div>
-
 ## ✨ Top Contributors
 
 Thanks to all our wonderful contributors! Contributions of any kind are welcome! 🚀
