@@ -43,18 +43,21 @@ This repository follows a structured approach to building the FlutterFolio app. 
 
 ```
 - lib/
-  - pages/
-    - home_page.dart
-    - widget_detail_page.dart
-  - widgets/
-    - widget_button.dart
+  - screens/
+    - home_screen.dart
+    - widget_detail_screen.dart
+  - models/
+    - widget_models.dart
   - main.dart
-- assets/
+  - assets/
   - images/
     - flutter_logo.png
-- data/
-  - widgets_data.dart
+  - data/
+    - widgets_data.dart
+  - theme
+    - app_theme.dart
 - README.md
+
 ```
 
 ## 🧮 How to Contribute
