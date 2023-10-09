@@ -18,7 +18,11 @@ class WidgetDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+             Image.asset(
+              widget.imagePath,
+              width: 200,
+            ),
+            const Text(
               'Description:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -26,10 +30,7 @@ class WidgetDetailScreen extends StatelessWidget {
               widget.description,
               style: TextStyle(fontSize: 16),
             ),
-            Image.asset(
-              widget.imagePath,
-              width: 200,
-            ),
+           
             // Add code snippet or additional details here
           ],
         ),
