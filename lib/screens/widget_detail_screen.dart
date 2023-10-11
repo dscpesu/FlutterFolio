@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfolio/models/widget_model.dart';
 import 'package:flutterfolio/widgets/app_bar_widget.dart';
 
+
 class WidgetDetailScreen extends StatelessWidget {
   final WidgetModel widget;
 

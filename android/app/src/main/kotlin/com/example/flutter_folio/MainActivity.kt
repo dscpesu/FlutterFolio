@@ -1,4 +1,4 @@
-package com.example.flutterfolio
+package com.example.flutter_folio
 
 import io.flutter.embedding.android.FlutterActivity
 
