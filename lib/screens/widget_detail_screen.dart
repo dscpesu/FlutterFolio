@@ -1,6 +1,8 @@
 // widget_detail_screen.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_folio/models/widget_model.dart';
+import 'package:flutterfolio/models/widget_model.dart';
+import 'package:flutterfolio/widgets/app_bar_widget.dart';
+
 
 class WidgetDetailScreen extends StatelessWidget {
   final WidgetModel widget;
@@ -10,27 +12,60 @@ class WidgetDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.name),
+      appBar: CustomAppBar(
+        title: widget.name,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          // Change Column to ListView
           children: [
             Text(
               'Description:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 10),
             Text(
               widget.description,
               style: TextStyle(fontSize: 16),
             ),
-            Image.asset(
-              widget.imagePath,
-              width: 200,
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(8.0), 
+              color: Colors.grey[300],
+              child: Image.asset(
+                widget.imagePath,
+                width: 200,
+              ),
             ),
-            // Add code snippet or additional details here
+            SizedBox(height: 20),
+            Text(
+              'Code Snippet:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              color: Colors.grey[300],
+              child: Text(
+                widget.codeSnippet,
+                style: TextStyle(fontFamily: 'Courier', fontSize: 14),
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Code Output:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(8.0), 
+              color: Colors.grey[300],
+              child: Image.asset(
+                widget.outputImage,
+                width: 200,
+              ),
+            )
           ],
         ),
       ),

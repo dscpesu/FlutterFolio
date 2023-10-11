@@ -1,24 +1,25 @@
-// home_screen.dart
 import 'package:flutter/material.dart';
 import '/models/widget_model.dart';
 import '/data/widget_data.dart';
+import 'package:flutterfolio/widgets/app_bar_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('FlutterFolio Widget Catalog'),
+      appBar: CustomAppBar(
+        title: 'FlutterFolio Widget Catalog',
       ),
       body: ListView.builder(
         itemCount: widgetData.length,
         itemBuilder: (context, index) {
-          final widget = widgetData[index];
+          final widgetModel = widgetData[index];
           return ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/widgetDetail', arguments: widget);
+              Navigator.pushNamed(context, '/widgetDetail',
+                  arguments: widgetModel);
             },
-            child: Text(widget.name),
+            child: Text(widgetModel.name),
           );
         },
       ),
