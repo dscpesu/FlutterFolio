@@ -1,7 +1,9 @@
-// widget_detail_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutterfolio/models/widget_model.dart';
-import 'package:flutterfolio/widgets/app_bar_widget.dart';
+import 'package:flutterfolio/widgets/app_bar_widget.dart';  // Import for CustomAppBar
+import 'package:flutterfolio/widgets/scaffold_widget.dart';  // Ensure you import CustomScaffold
+import 'package:flutter_highlight/flutter_highlight.dart';
+import 'package:flutter_highlight/themes/github.dart';
 
 class WidgetDetailScreen extends StatelessWidget {
   final WidgetModel widget;
@@ -10,14 +12,13 @@ class WidgetDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
+    return CustomScaffold(
+      appBar: CustomAppBar(   // Utilizing the CustomAppBar
         title: widget.name,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          // Change Column to ListView
           children: [
             Text(
               'Description:',
@@ -30,7 +31,7 @@ class WidgetDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(8.0), 
+              padding: EdgeInsets.all(8.0),
               color: Colors.grey[300],
               child: Image.asset(
                 widget.imagePath,
@@ -44,11 +45,14 @@ class WidgetDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               color: Colors.grey[300],
-              child: Text(
+              child: HighlightView(
                 widget.codeSnippet,
-                style: TextStyle(fontFamily: 'Courier', fontSize: 14),
+                language: 'dart',
+                theme: githubTheme,
+                padding: EdgeInsets.all(8.0),
+                textStyle: TextStyle(fontSize: 16),
               ),
             ),
             SizedBox(height: 20),
@@ -58,7 +62,7 @@ class WidgetDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(8.0), 
+              padding: EdgeInsets.all(8.0),
               color: Colors.grey[300],
               child: Image.asset(
                 widget.outputImage,
