@@ -5,6 +5,7 @@ import 'package:flutterfolio/widgets/scaffold_widget.dart';  // Ensure you impor
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/github.dart';
 
+
 class WidgetDetailScreen extends StatelessWidget {
   final WidgetModel widget;
 

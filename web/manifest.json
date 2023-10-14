@@ -1,6 +1,6 @@
 {
-    "name": "flutterfolio",
-    "short_name": "flutterfolio",
+    "name": "flutter_folio",
+    "short_name": "flutter_folio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfolio/screens/home_screen.dart';
-import 'package:flutterfolio/screens/widget_detail_screen.dart';
-import 'package:flutterfolio/models/widget_model.dart';
-import 'package:flutterfolio/theme/app_theme.dart';
+import 'package:flutter_folio/screens/home_screen.dart';
+import 'package:flutter_folio/screens/widget_detail_screen.dart';
+import 'package:flutter_folio/models/widget_model.dart';
+import 'package:flutter_folio/theme/app_theme.dart';
 
 void main() {
   runApp(FlutterFolioApp());

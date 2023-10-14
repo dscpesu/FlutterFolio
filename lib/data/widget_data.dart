@@ -1,5 +1,5 @@
 // widget_data.dart
-import 'package:flutterfolio/models/widget_model.dart';
+import 'package:flutter_folio/models/widget_model.dart';
 
 List<WidgetModel> widgetData = [
   WidgetModel(
