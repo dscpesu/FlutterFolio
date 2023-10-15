@@ -138,5 +138,20 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
   }
 }
 '''),
+  WidgetModel(
+      name: 'Container',
+      description: 'A convenience widget that combines common painting, positioning, and sizing widgets. A container first surrounds the child with padding (inflated by any borders present in the decoration) and then applies additional constraints to the padded extent (incorporating the width and height as constraints, if either is non-null). The container is then surrounded by additional empty space described from the margin.',
+      imagePath: 'assets/images/container/container.png',
+      outputImage: 'assets/images/container/container_op.png',
+      codeSnippet: '''
+      Center(
+          child: Container(
+          margin: const EdgeInsets.all(10.0),
+          color: Colors.amber[600],
+          width: 48.0,
+          height: 48.0,
+          ),  
+      )'''
+  )
   // Add more widgets here
 ];
