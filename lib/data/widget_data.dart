@@ -3,11 +3,39 @@ import 'package:flutter_folio/models/widget_model.dart';
 
 List<WidgetModel> widgetData = [
   WidgetModel(
-    name: 'lorem ipsum',
-    description: 'Description for the widget goes here.',
-    imagePath: 'assets/images/widget_image.png',
-    outputImage: '',
-    codeSnippet: '',
+    name: 'Text',
+    description: '''The Text widget displays a string of text with single style. The string might break across multiple lines or might all be displayed on the same line depending on the layout constraints.
+
+Here are the attributes of the Text widget :
+
+1. data or text: The text content to be displayed.
+2. style: Defines text style properties (e.g., fontSize, color).
+3. textAlign: Sets text alignment (e.g., TextAlign.center).
+4. softWrap: Allows text to wrap to the next line.
+5. overflow: Handles overflowing text (e.g., TextOverflow.ellipsis).    
+    ''',
+    imagePath: 'assets/images/text/text.png',
+    outputImage: 'assets/images/text/text_op.png',
+    codeSnippet: '''
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "Helo World",
+          style: TextStyle(
+            fontSize: 49,
+            color: Colors.blue,
+            fontWeight: FontWeight.bold,
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
+    );
+  }
+}
+''',
   ),
   WidgetModel(
     name: 'Image',
