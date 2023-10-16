@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfolio/models/widget_model.dart';
-import 'package:flutterfolio/widgets/app_bar_widget.dart';  // Import for CustomAppBar
-import 'package:flutterfolio/widgets/scaffold_widget.dart';  // Ensure you import CustomScaffold
+import 'package:flutter_folio/models/widget_model.dart';
+import 'package:flutter_folio/widgets/app_bar_widget.dart';  // Import for CustomAppBar
+import 'package:flutter_folio/widgets/scaffold_widget.dart';  // Ensure you import CustomScaffold
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/github.dart';
 
