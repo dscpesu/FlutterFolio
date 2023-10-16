@@ -10,12 +10,33 @@ List<WidgetModel> widgetData = [
     codeSnippet: '',
   ),
   WidgetModel(
-    name: 'lorem ipsum',
-    description: 'Description for the widget goes here.',
-    imagePath: 'assets/images/widget_image.png',
-    outputImage: '',
-    codeSnippet: '',
-  ),
+    name: 'Image',
+    description: 'The Image widget in Flutter is a fundamental component used to display images within an application. It provides a seamless way to incorporate visual content, such as icons, photographs, or graphics, into the user interface.',
+    imagePath: 'assets/images/image/image.png',
+    outputImage: 'assets/images/image/image_op.png',
+    codeSnippet: '''import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Container(
+            height: 300,
+            width: 300,
+            color: Colors.blue,
+            child: Image.asset(
+              'lib/images/playstation.jpg',
+              fit: BoxFit.fill,),
+          ),
+        ),
+      ),
+    );
+  }
+}
+  '''),
   WidgetModel(
       name: 'AppBar',
       description:
