@@ -67,6 +67,10 @@ flutter:
     - assets/images/scaffold/scaffold.png
     - assets/images/container/container.png
     - assets/images/container/container_op.png
+    - assets/images/image/image.png
+    - assets/images/image/image_op.png
+    - assets/images/text/text.png
+    - assets/images/text/text_op.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
