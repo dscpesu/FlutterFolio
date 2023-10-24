@@ -71,8 +71,8 @@ flutter:
     - assets/images/image/image_op.png
     - assets/images/elevatedButton/elevatedButton.png
     - assets/images/elevatedButton/elevatedButton_op.png
-    - assets/images/texts/text.png
-    - assets/images/texts/text_op.png
+    - assets/images/text/text.png
+    - assets/images/text/text_op.png
     - assets/images/column/column.png
     - assets/images/column/column_op.png
   #   - images/a_dot_ham.jpeg
