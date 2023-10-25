@@ -79,6 +79,8 @@ flutter:
     - assets/images/icon/icon_op.png
     - assets/images/row/row.png
     - assets/images/row/row_op.png
+    - assets/images/InkWell/Inkwell.png
+    - assets/images/InkWell/Inkwell_output.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
