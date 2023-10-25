@@ -75,6 +75,10 @@ flutter:
     - assets/images/text/text_op.png
     - assets/images/column/column.png
     - assets/images/column/column_op.png
+    - assets/images/icon/icon.jpeg
+    - assets/images/icon/icon_op.png
+    - assets/images/row/row.png
+    - assets/images/row/row_op.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
