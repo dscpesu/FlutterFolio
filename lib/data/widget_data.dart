@@ -341,5 +341,61 @@ WidgetModel(
         ],
       )'''
 ),
+  WidgetModel(
+      name: 'InkWell',
+      description:
+      'A rectangular area of a Material that responds to touch. The InkWell widget must have a Material widget as an ancestor. The Material widget is where the ink reactions are actually painted. This matches the Material Design premise wherein the Material is what is actually reacting to touches by spreading ink.',
+      imagePath: 'assets/images/InkWell/Inkwell.png',
+      outputImage: 'assets/images/InkWell/Inkwell_output.png',
+      codeSnippet: '''
+      class InkWellExampleApp extends StatelessWidget {
+  const InkWellExampleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('InkWell Sample')),
+        body: const Center(
+          child: InkWellExample(),
+        ),
+      ),
+    );
+  }
+}
+
+class InkWellExample extends StatefulWidget {
+  const InkWellExample({super.key});
+
+  @override
+  State<InkWellExample> createState() => _InkWellExampleState();
+}
+
+class _InkWellExampleState extends State<InkWellExample> {
+  double sideLength = 50;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      height: sideLength,
+      width: sideLength,
+      duration: const Duration(seconds: 2),
+      curve: Curves.easeIn,
+      child: Material(
+        color: Colors.yellow,
+        child: InkWell(
+          onTap: () {
+            setState(() {
+              sideLength == 50 ? sideLength = 100 : sideLength = 50;
+            });
+          },
+        ),
+      ),
+    );
+  }
+}
+'''
+  ),
+
   // Add more widgets here
 ];
