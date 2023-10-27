@@ -8,7 +8,7 @@ class CustomScaffold extends StatelessWidget {
   final Color? backgroundColor;
   final BottomNavigationBar? bottomNavigationBar;
 
-  CustomScaffold({
+  const CustomScaffold({super.key, 
     this.appBar,
     this.body,
     this.floatingActionButton,

@@ -5,10 +5,12 @@ import 'package:flutter_folio/models/widget_model.dart';
 import 'package:flutter_folio/theme/app_theme.dart';
 
 void main() {
-  runApp(FlutterFolioApp());
+  runApp(const FlutterFolioApp());
 }
 
 class FlutterFolioApp extends StatelessWidget {
+  const FlutterFolioApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +18,7 @@ class FlutterFolioApp extends StatelessWidget {
       theme: AppTheme.lightTheme(), // Use your light theme
       initialRoute: '/', // Set the initial route
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => const HomeScreen(),
         '/widgetDetail': (context) {
           final args =
               ModalRoute.of(context)!.settings.arguments as WidgetModel;

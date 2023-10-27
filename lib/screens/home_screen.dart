@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
-import '/models/widget_model.dart';
 import '/data/widget_data.dart';
-import '/widgets/app_bar_widget.dart';
 import '/widgets/scaffold_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
       appBar: AppBar(
-        title: Text('FlutterFolio Widget Catalog'),
-        backgroundColor: Color(0xFF5078B2),  // Change color of AppBar
+        elevation: 0,
+        backgroundColor: const Color(0xFF64B5F6),
+        title: Text(
+          'FlutterFolio Widget Catalog',
+          style: GoogleFonts.poppins(
+            textStyle: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -22,18 +33,19 @@ class HomeScreen extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, 
-            childAspectRatio: 3/2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 3 / 2,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 15,
           ),
           itemCount: widgetData.length,
           itemBuilder: (context, index) {
             final widgetModel = widgetData[index];
             return GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/widgetDetail', arguments: widgetModel);
+                Navigator.pushNamed(context, '/widgetDetail',
+                    arguments: widgetModel);
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -52,7 +64,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ClipRRect(
-                        borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                        borderRadius:
+                            const BorderRadius.vertical(top: Radius.circular(15)),
                         child: Image.asset(
                           widgetModel.imagePath,
                           fit: BoxFit.cover,
@@ -63,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         widgetModel.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'YourCustomFont',

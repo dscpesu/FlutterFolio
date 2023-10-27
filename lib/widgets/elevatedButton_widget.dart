@@ -8,7 +8,7 @@ class CustomElevatedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final IconData? iconData;
 
-  CustomElevatedButton({
+  const CustomElevatedButton({super.key, 
     required this.text,
     required this.onPressed,
     this.type = ButtonType.primary,
@@ -33,14 +33,13 @@ class CustomElevatedButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: buttonColor,
-        onPrimary: textColor,
+        foregroundColor: textColor, backgroundColor: buttonColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (iconData != null) Icon(iconData, size: 18),
-          if (iconData != null) SizedBox(width: 8),
+          if (iconData != null) const SizedBox(width: 8),
           Text(text),
         ],
       ),
