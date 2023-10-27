@@ -6,7 +6,7 @@ class CustomColumn extends StatelessWidget {
   final List<Widget> children;
   final ColumnType type;
 
-  CustomColumn({required this.children, this.type = ColumnType.spaced});
+  const CustomColumn({super.key, required this.children, this.type = ColumnType.spaced});
 
   @override
   Widget build(BuildContext context) {

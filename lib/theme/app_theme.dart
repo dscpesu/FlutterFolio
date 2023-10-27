@@ -12,11 +12,11 @@ class AppTheme {
   static ThemeData themeData(Brightness brightness) {
     final bool isDark = brightness == Brightness.dark;
 
-    final Color primaryColor = Color(0xFF1565C0);
-    final Color accentColor = Color(0xFF64B5F6);
+    const Color primaryColor = Color(0xFF1565C0);
+    const Color accentColor = Color(0xFF64B5F6);
 
     final Color foregroundColor = isDark ? Colors.white : Colors.black;
-    final Color backgroundColor = isDark ? Colors.black87 : Color(0xFFFAFAFA); // Off-white for light mode
+    final Color backgroundColor = isDark ? Colors.black87 : const Color(0xFFFAFAFA); // Off-white for light mode
 
     final ColorScheme colorScheme = ColorScheme(
       brightness: brightness,
@@ -38,7 +38,7 @@ class AppTheme {
       brightness: brightness,
       scaffoldBackgroundColor: backgroundColor,
       textTheme: TextTheme(
-        bodyText1: TextStyle(fontSize: 16, color: foregroundColor),
+        bodyLarge: TextStyle(fontSize: 16, color: foregroundColor),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
